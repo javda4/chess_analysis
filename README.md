@@ -196,8 +196,7 @@ uvicorn api.engine_api:app --reload
 - Stage classification: opening / middlegame / endgame
 
 ### Example JSON Output
-<details>
-  <summary>View JSON</summary>
+
   ```json
   {
   "best_move": "Nf3",
@@ -210,3 +209,45 @@ uvicorn api.engine_api:app --reload
 }
 ```
 
+## Modules & Scripts
+
+### pgn_to_csv/
+- convert_pgn.py
+Converts PGN → CSV with moves, ECO, results, tags.
+
+### database/
+
+- schema.sql — MySQL database structure
+- insert_games.py — Loads CSV into MySQL
+- queries_example.sql — Example analytics queries
+
+### analysis/
+
+- opening_analysis.py — Opening win/loss percentages
+- middlegame_analysis.py — Middlegame strategy evaluation
+- endgame_analysis.py — Endgame pattern success rates
+- correlation_report.py — Strategy correlation matrix
+- generate_summary.py — Human-readable summary reports
+
+### ml/
+
+- feature_engineering.py — Converts positions to ML features
+- train_model.py — ML training pipeline
+- evaluate_model.py — Tests accuracy of the model
+- predict_position.py — Predicts moves & win chance from FEN
+
+### api/
+
+- engine_api.py — FastAPI interface for the prediction engine
+
+## Planned Enhancements
+
+- Interactive web dashboard
+- Real-time game advisor
+- Chess GUI integration
+- Hybrid Stockfish + ML evaluation
+- Support for Lichess / Chess.com importing
+- Opening repertoire suggestions
+- User-based personalized models
+
+## License
