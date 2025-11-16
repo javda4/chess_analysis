@@ -101,32 +101,59 @@ This system combines:
 
 ## Project Structure
 /chess-insight-engine
+
 │── README.md
+
 │── requirements.txt
+
 │
+
 ├── pgn_to_csv/
+
 │ └── convert_pgn.py
+
 │
+
 ├── database/
+
 │ ├── schema.sql
+
 │ ├── insert_games.py
+
 │ └── queries_example.sql
+
 │
+
 ├── analysis/
+
 │ ├── opening_analysis.py
+
 │ ├── middlegame_analysis.py
+
 │ ├── endgame_analysis.py
+
 │ ├── correlation_report.py
+
 │ └── generate_summary.py
+
 │
+
 ├── ml/
+
 │ ├── feature_engineering.py
+
 │ ├── train_model.py
+
 │ ├── evaluate_model.py
+
 │ └── predict_position.py
+
 │
+
 └── api/
+
 └── engine_api.py
+
 
 ---
 
